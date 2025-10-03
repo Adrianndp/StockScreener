@@ -14,4 +14,4 @@ def get_sp500_tickers():
     sp500["Symbol"] = sp500["Symbol"].str.replace(".", "-", regex=False)
     sp_tickers = sp500['Symbol'].tolist()
     sp_tickers = sorted(sp_tickers)
-    return sp_tickers
+    return sp_tickers[:4]  # Limit to first 10 tickers for testing
